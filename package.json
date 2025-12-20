@@ -1,0 +1,19 @@
+{
+  "name": "kubera",
+  "version": "0.0.1",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "commander": "^14.0.2",
+    "googleapis": "^169.0.0",
+    "pdf-parse": "^2.4.5",
+    "zod": "^4.2.1"
+  }
+}
