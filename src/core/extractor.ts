@@ -1,6 +1,5 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-const pdf = require("pdf-parse");
 
 export async function extractText(
 	pdfPath: string,
@@ -25,8 +24,12 @@ export async function extractText(
 	} catch (e) {
 		// Cache miss or error reading cache, parse PDF
 		console.log(`Extracting text from ${path.basename(pdfPath)}...`);
-		const data = await pdf(buffer, { password });
-		const text = data.text;
+		const { PDFParse } = require("pdf-parse");
+		const pdfInstance = new PDFParse({
+			data: new Uint8Array(buffer),
+			password,
+		});
+		const text = await pdfInstance.getText();
 
 		// Write to cache
 		await fs.writeFile(cachePath, text, "utf-8");

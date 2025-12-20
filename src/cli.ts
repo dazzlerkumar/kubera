@@ -1,5 +1,8 @@
 import { Command } from "commander";
 import packageJson from "../package.json";
+import { extractText } from "./core/extractor";
+import { parseStatement } from "./core/parser";
+import { HDFCCreditProfile } from "./core/profiles/hdfc-credit";
 
 const program = new Command();
 
@@ -34,11 +37,32 @@ program
 	.description("Parse statement and show results without uploading")
 	.argument("<file>", "Path to the PDF statement")
 	.option("-p, --password <password>", "Password for encrypted PDFs")
-	.action((file, options) => {
+	.action(async (file, options) => {
 		console.log(
 			`Dry-running ${file} with password: ${options.password ? "****" : "none"}`,
 		);
-		// TODO: Implement dry-run logic
+		try {
+			const text = await extractText(file, options.password);
+			const transactions = await parseStatement(text, [HDFCCreditProfile]);
+
+			console.log("\n--- Parsed Transactions ---");
+			console.table(
+				transactions.map((t) => ({
+					Date: t.date,
+					Merchant: t.merchant,
+					Amount: t.amount,
+					Direction: t.direction,
+				})),
+			);
+			console.log(`\nTotal Transactions: ${transactions.length}`);
+			const totalAmount = transactions.reduce(
+				(sum, t) => sum + (t.direction === "debit" ? -t.amount : t.amount),
+				0,
+			);
+			console.log(`Net Amount: ${totalAmount.toFixed(2)}`);
+		} catch (error: any) {
+			console.error(`Error: ${error.message}`);
+		}
 	});
 
 program
