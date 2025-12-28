@@ -15,7 +15,7 @@ program
 	.command("init")
 	.description("Initialize local configuration and Google Sheets connection")
 	.action(() => {
-		console.log("Initializing Kubera...");
+		console.log("Initializing Kubera....");
 		// TODO: Implement init logic
 	});
 
