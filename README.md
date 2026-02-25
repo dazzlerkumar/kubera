@@ -15,6 +15,7 @@
 - 📊 **Google Sheets Sync**: Seamless integration to push transactions directly to your target spreadsheets.
 - ⚡ **Lightning Fast**: Built on [Bun](https://bun.sh) for peak performance.
 - 🧠 **Smart Caching**: Local caching of extracted text to speed up repeated runs.
+- 🧠 **Smart Categorization**: Uses a local SLM (via Ollama) to intelligently categorize transactions without cloud APIs!
 - 🛠️ **Developer Friendly**: Clean CLI interface with dry-run capabilities for safe testing.
 
 ---
@@ -24,6 +25,7 @@
 Kubera is built using a modern, high-performance stack:
 
 - **Runtime**: [Bun](https://bun.sh) (JavaScript/TypeScript runtime)
+- **Local AI Context**: [Ollama](https://ollama.com) (For semantic categorization)
 - **CLI Framework**: [Commander.js](https://github.com/tj/commander.js)
 - **PDF Engine**: `pdf-parse`
 - **Validation**: [Zod](https://zod.dev)
@@ -38,6 +40,7 @@ Kubera is built using a modern, high-performance stack:
 ### Prerequisites
 
 - [Bun](https://bun.sh) installed on your machine.
+- [Ollama](https://ollama.com) installed and running locally for automatic categorization.
 
 ### Installation
 
@@ -50,6 +53,13 @@ Kubera is built using a modern, high-performance stack:
 2. Install dependencies:
    ```bash
    bun install
+   ```
+
+3. Setup your Local LLM:
+   Kubera uses Ollama to run a local SLM (e.g. `llama3.2`) for transaction categorization. 
+   Before running the CLI, ensure Ollama is installed, running, and the model is pulled:
+   ```bash
+   ollama pull llama3.2
    ```
 
 ---

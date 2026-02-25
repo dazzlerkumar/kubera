@@ -1,0 +1,72 @@
+Dry-running ./sample.pdf with password: ****
+Using cached text for sample.pdf
+Matched profile: HDFC Savings Account
+Sending 58 transactions to Ollama (llama3.2)...
+LLM returned 107 categories for 58 transactions. Returning unmapped.
+
+--- Parsed Transactions ---
+┌────┬──────────┬──────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────┬──────────┬───────────┐
+│    │ Date     │ Category │ Merchant                                                                                                       │ Amount   │ Direction │
+├────┼──────────┼──────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────────┼───────────┤
+│  0 │ 01/12/25 │ -        │ UPI-DEEPAK KUMAR-7275044169@PTAXIS-SBIN  0009916-533504482435-SAVINGS                                          │ 6000     │ debit     │
+│  1 │ 01/12/25 │ -        │ 50200091205453-TPT-SALARY-TECHPIX SOFTWA  RE SOLUTIONS PVT LTD                                                 │ 100000   │ credit    │
+│  2 │ 01/12/25 │ -        │ UPI-DREAMPLUG SERVICE PR-CRED.TELECOM@AX  ISB-UTIB0000114-570110301785-PAYMENT ON CRED                         │ 298      │ debit     │
+│  3 │ 01/12/25 │ -        │ UPI-ABHISHEK KUMAR NIGAM-8009615096@KOTA  K811-KKBK0000958-533500210329-ELECTRONIC S                           │ 1000     │ debit     │
+│  4 │ 02/12/25 │ -        │ UPI-ABHISHEK KUMAR NIGAM-8009615096@UBOI  -UBIN0916501-533611781238-EXPENSES                                   │ 8000     │ debit     │
+│  5 │ 02/12/25 │ -        │ UPI-GANGA RAM-YDNL0R9RUC@POSTBANK-IPOS00  00001-533613862118-MILK                                              │ 105      │ debit     │
+│  6 │ 02/12/25 │ -        │ UPI-MOHIT KUMAR-PAYTMQR69GUHR@PTYS-YESB0  PTMUPI-533615783291-SUBJI                                            │ 70       │ debit     │
+│  7 │ 03/12/25 │ -        │ UPI-AWADH TRADERS-VYAPAR.170189115871@HD  FCBANK-HDFC0MERUPI-533730622601-CARD                                 │ 1500     │ debit     │
+│  8 │ 03/12/25 │ -        │ UPI-WAHID BIRYANI-VYAPAR.170145911530@HD  FCBANK-HDFC0MERUPI-533731817046-BIRYANI                              │ 180      │ debit     │
+│  9 │ 03/12/25 │ -        │ UPI-VIJAY KUMAR-BHARATPE.90071059164@FBP  E-FDRL0001382-533732080217-PAY TO BHARAT PE ME                       │ 500      │ debit     │
+│ 10 │ 03/12/25 │ -        │ UPI-HASHMI HUSAIN RIZVI-8808467348@INDIA  NBK-IDIB000A606-533732311204-SWEATER                                 │ 250      │ debit     │
+│ 11 │ 03/12/25 │ -        │ UPI-VIVEK GUPTA-Q560192419@YBL-YESB0YBLU  PI-533732389069-FROCK                                                │ 650      │ debit     │
+│ 12 │ 03/12/25 │ -        │ UPI-RAHUL GUPTA-9389459294-2@AXL-SBIN00  01526-533732448037-SENT USING PAYTM U                                 │ 400      │ debit     │
+│ 13 │ 03/12/25 │ -        │ ATW-416021XXXXXX1716-S1ACLK35-LUCKNOW                                                                          │ 2000     │ debit     │
+│ 14 │ 04/12/25 │ -        │ UPI-JUPITER UPI COLLECT-JUPITERUPICOLLEC  T.10005424@CSBPAY-CSBK0000376-1323405833 85-SENT VIA JUPITER         │ 1213     │ debit     │
+│ 15 │ 04/12/25 │ -        │ APY26654711_122025_500896536582_INSTALLM                                                                       │ 64       │ debit     │
+│ 16 │ 04/12/25 │ -        │ UPI-GANGA RAM-YDNL0R9RUC@POSTBANK-IPOS00  00001-533839255079-DAHI                                              │ 35       │ debit     │
+│ 17 │ 04/12/25 │ -        │ UPI-SANI-Q715884097@YBL-YESB0YBLUPI-5338  44497870-EGGS                                                        │ 20       │ debit     │
+│ 18 │ 05/12/25 │ -        │ UPI-GANGA RAM-YDNL0R9RUC@POSTBANK-IPOS00  00001-533956084345-MILK                                              │ 110      │ debit     │
+│ 19 │ 05/12/25 │ -        │ UPI-INDIAN CLEARING CORP-ICCLZR@YESPAY-H  DFC0000060-570525981698-NOTIFICATION FOR E                           │ 1000     │ debit     │
+│ 20 │ 06/12/25 │ -        │ UPI-INDIAN CLEARING CORP-ICCLZR@YESPAY-H  DFC0000060-570626195281-NOTIFICATION FOR E                           │ 500      │ debit     │
+│ 21 │ 06/12/25 │ -        │ UPI-CRED CLUB-CRED.CLUB@AXISB-UTIB000011  4-570603177057-PAYMENT ON CRED                                       │ 479      │ debit     │
+│ 22 │ 06/12/25 │ -        │ UPI-BHAVYA TAYAL-8708484597@PTYES-KKBK0  004329-393359683985-SENT FROM PAYTM                                   │ 1250     │ credit    │
+│ 23 │ 06/12/25 │ -        │ UPI-GANGA RAM-YDNL0R9RUC@POSTBANK-IPOS00  00001-534069469033-MILK                                              │ 105      │ debit     │
+│ 24 │ 06/12/25 │ -        │ UPI-SHILPA-PAYTMQR6VI0VB@PTYS-YESB0PTMUP  I-534070017687-CHAI                                                  │ 30       │ debit     │
+│ 25 │ 06/12/25 │ -        │ UPI-ADHOC KHANNA FUELS-PAYTMQR2810050501  01FM4WOA57QO52@PAYTM-YESB0PTMUPI-5340703 31385-FUEL                  │ 500      │ debit     │
+│ 26 │ 06/12/25 │ -        │ UPI-MOHD AQRAM-9795699161@IBL-CNRB000003  3-534072385653-SENT USING PAYTM U                                    │ 700      │ debit     │
+│ 27 │ 06/12/25 │ -        │ UPI-AWADH TRADERS-VYAPAR.170189115871@HD  FCBANK-HDFC0MERUPI-534073133442-CARD                                 │ 1000     │ debit     │
+│ 28 │ 06/12/25 │ -        │ UPI-MR SHER ALI-BHAISHERA886-1@OKHDFCBAN  K-IDIB000I512-534073285916-SENT USING PA YTM U                       │ 90       │ debit     │
+│ 29 │ 07/12/25 │ -        │ EMI 466998100 CHQ S4669981000021 1225466  998100                                                               │ 18641    │ debit     │
+│ 30 │ 07/12/25 │ -        │ UPI-RAM CHANDRA-8948304687@YBL-SBIN0003  223-924446317148-PAYMENT FROM PHONE                                   │ 1000     │ credit    │
+│ 31 │ 07/12/25 │ -        │ UPI-TATA ONE MG HEALTHCA-TATAONEMGHEALTH  CARES.63514157@HDFCBANK-HDFC0MERUPI-5341 86600483-SENT USING PAYTM U │ 545      │ debit     │
+│ 32 │ 07/12/25 │ -        │ UPI-SANI-Q715884097@YBL-YESB0YBLUPI-5341  86863479-EGGS                                                        │ 30       │ debit     │
+│ 33 │ 07/12/25 │ -        │ UPI-RAM CHANDRA-8948304687@YBL-SBIN0003  223-267654490117-PAYMENT FROM PHONE                                   │ 600      │ credit    │
+│ 34 │ 08/12/25 │ -        │ UPI-GANGA RAM-YDNL0R9RUC@POSTBANK-IPOS00  00001-534297878240-MILK                                              │ 125      │ debit     │
+│ 35 │ 09/12/25 │ -        │ UPI-BHAVYA TAYAL-8708484597@PTYES-KKBK00  04329-534312086575-JAA SIMRAN JI LE A                                │ 1250     │ debit     │
+│ 36 │ 09/12/25 │ -        │ UPI-SANI-Q150826277@YBL-YESB0YBLUPI-5343  14598294-EGGS                                                        │ 37       │ debit     │
+│ 37 │ 09/12/25 │ -        │ UPI-DREAMPLUG SERVICE PR-CRED.TELECOM@AX  ISB-UTIB0000114-570900780493-PAYMENT ON CRED                         │ 859      │ debit     │
+│ 38 │ 10/12/25 │ -        │ UPI-AMRITA KUMARI-AMRITAGSVM05@OKSBI-BAR  B0SAFEDA-534426364495-SENT USING PAYTM U                             │ 500      │ debit     │
+│ 39 │ 10/12/25 │ -        │ UPI-AMRITA KUMARI-AMRITAGSVM05@OKAXIS-BA  RB0SAFEDA-534426724879-SENT USING PAYTM U                            │ 546      │ debit     │
+│ 40 │ 10/12/25 │ -        │ UPI-NIYAZ AHMAD-Q963644498@YBL-YESB0YBLU  PI-534428998197-BULB                                                 │ 100      │ debit     │
+│ 41 │ 10/12/25 │ -        │ UPI-NIYAZ AHMAD-Q963644498@YBL-YESB0YBLU  PI-534429540884-SENT USING PAYTM U                                   │ 20       │ debit     │
+│ 42 │ 10/12/25 │ -        │ UPI-GANGA RAM-YDNL0R9RUC@POSTBANK-IPOS00  00001-534429576827-MILK                                              │ 105      │ debit     │
+│ 43 │ 10/12/25 │ -        │ UPI-SANI-Q715884097@YBL-YESB0YBLUPI-5344  30059804-EGGS                                                        │ 37       │ debit     │
+│ 44 │ 11/12/25 │ -        │ UPI-SANI-Q715884097@YBL-YESB0YBLUPI-5345  43500485-EGG                                                         │ 25       │ debit     │
+│ 45 │ 12/12/25 │ -        │ UPI-SANI-Q150826277@YBL-YESB0YBLUPI-5346  57114762-SUBJI                                                       │ 50       │ debit     │
+│ 46 │ 12/12/25 │ -        │ UPI-SANI-Q724004179@YBL-YESB0YBLUPI-5346  57194998-EGGS                                                        │ 24       │ debit     │
+│ 47 │ 12/12/25 │ -        │ UPI-GANGA RAM-YDNL0R9RUC@POSTBANK-IPOS00  00001-534657279270-MILK AND DAHI                                     │ 105      │ debit     │
+│ 48 │ 13/12/25 │ -        │ UPI-CRED CLUB-CRED.CLUB@AXISB-UTIB000011  4-571321318706-PAYMENT ON CRED                                       │ 13495.01 │ debit     │
+│ 49 │ 13/12/25 │ -        │ UPI-AMRITA KUMARI-AMRITAGSVM05@OKAXIS-BA  RB0SAFEDA-534764592944-SENT USING PAYTM U                            │ 803      │ debit     │
+│ 50 │ 13/12/25 │ -        │ UPI-SATISH-Q169705162@YBL-YESB0YBLUPI-53  4764678713-BIRYANI                                                   │ 60       │ debit     │
+│ 51 │ 13/12/25 │ -        │ UPI-REKHA-8318349218-2@AXL-UTIB0002521-5  34766631070-GAS                                                      │ 890      │ debit     │
+│ 52 │ 13/12/25 │ -        │ UPI-UTTAR PRADESH POWER -BILLDESKPG.UPPC  L@HDFCBANK-HDFC0MERUPI-534768937367-PAY                              │ 1113     │ debit     │
+│ 53 │ 13/12/25 │ -        │ UPI-SANI-Q715884097@YBL-YESB0YBLUPI-5347  70514918-EGGS                                                        │ 24       │ debit     │
+│ 54 │ 13/12/25 │ -        │ UPI-SANI-Q724004179@YBL-YESB0YBLUPI-5347  70574978-SUBJI                                                       │ 90       │ debit     │
+│ 55 │ 13/12/25 │ -        │ UPI-GANGA RAM-YDNL0R9RUC@POSTBANK-IPOS00  00001-534770654953-MILK                                              │ 70       │ debit     │
+│ 56 │ 14/12/25 │ -        │ UPI-GANGA RAM-YDNL0R9RUC@POSTBANK-IPOS00  00001-534882930032-BREAKFAST                                         │ 125      │ debit     │
+│ 57 │ 14/12/25 │ -        │ UPI-MS NEW MANISH EATING-PAYTMQR6MWRCF@P  TYS-YESB0PTMUPI-534886441496-SENT USING PAYTM U                      │ 220      │ debit     │
+└────┴──────────┴──────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴──────────┴───────────┘
+
+Total Transactions: 58
+Net Amount: 36161.99

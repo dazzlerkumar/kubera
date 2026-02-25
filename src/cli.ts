@@ -2,7 +2,9 @@ import { Command } from "commander";
 import packageJson from "../package.json";
 import { extractText } from "./core/extractor";
 import { parseStatement } from "./core/parser";
+import { categorizeTransactionsBatch } from "./core/categorizer";
 import { HDFCCreditProfile } from "./core/profiles/hdfc-credit";
+import { HDFCSavingsProfile } from "./core/profiles/hdfc-savings";
 
 const program = new Command();
 
@@ -43,12 +45,26 @@ program
 		);
 		try {
 			const text = await extractText(file, options.password);
-			const transactions = await parseStatement(text, [HDFCCreditProfile]);
+			let transactions = await parseStatement(text, [
+				HDFCCreditProfile,
+				HDFCSavingsProfile,
+			]);
+
+			try {
+				transactions = await categorizeTransactionsBatch(
+					transactions,
+					// You can add a CLI option later if you want custom models
+					"llama3.2",
+				);
+			} catch (llmError: any) {
+				console.log(`\n⚠️  Skipping categorization: ${llmError.message}`);
+			}
 
 			console.log("\n--- Parsed Transactions ---");
 			console.table(
 				transactions.map((t) => ({
 					Date: t.date,
+					Category: t.category ?? "-",
 					Merchant: t.merchant,
 					Amount: t.amount,
 					Direction: t.direction,
