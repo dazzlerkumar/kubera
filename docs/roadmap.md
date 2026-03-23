@@ -35,3 +35,7 @@ Improve the extraction engine to better handle corrupted or non-standard PDFs, a
 
 - **Web Dashboard (Local)**: A lightweight local web GUI built on Bun's native HTTP server to view cached transactions, dry-runs, and manage Google Sheet tokens without using the CLI.
 - **Transaction Deduplication UI**: A visual diff before syncing to Google Sheets to review exactly what will be uploaded and what will be skipped.
+
+
+## Good to have
+- **Personal Financial Advisor**:  Locall LLM will read the transactions and provide insights on spending habits and saving opportunities.
